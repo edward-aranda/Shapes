@@ -1,0 +1,200 @@
+import javax.swing.JOptionPane;
+
+public class Shapes
+{
+	public static void main(String[]args)
+	{
+		String option;
+		char input;
+		do 
+		{	
+			int num;
+			String areaVolume;
+			areaVolume = JOptionPane.showInputDialog("Choose 1 or 2:\n1- Area\n2- Volume");
+			num = Integer.parseInt(areaVolume);
+
+			//if user chooses number 1 then it will ask to choose a shape.
+			if(num == 1)
+			{
+        	String area;
+            area = JOptionPane.showInputDialog("Choose 1, 2, 3, 4, or 5:\n1- Triangle\n2- Parallelogram " +
+                                                         "\n3- Rectangle\n4- Trapezoid\n5- Circle");
+            int num1;
+            num1 = Integer.parseInt(area);
+                      
+            switch (num1)
+            {
+            	//if user chooses 1 (triangle) it will ask the user to enter dimensions.
+                case 1:
+                String triangle;
+                triangle = JOptionPane.showInputDialog("Enter the base of the triangle");
+                double triangleBase;
+                triangleBase = Double.parseDouble(triangle);
+                String triangle1;
+                triangle1 = JOptionPane.showInputDialog("Enter the height of the triangle");
+                double triangleHeight;
+                triangleHeight = Double.parseDouble(triangle1);
+                JOptionPane.showMessageDialog(null,"The area of the triangle is:\n" +
+                      (.5 * (triangleBase * triangleHeight)));
+                break;
+                
+                //if user chooses 2 (parallelogram) it will ask the user to enter dimensions.
+                case 2:
+                String parallelogram;
+                parallelogram = JOptionPane.showInputDialog("Enter the base of the parallelogram");
+                double parallelogramBase;
+                parallelogramBase = Double.parseDouble(parallelogram);
+                String parallelogram1;
+                parallelogram1 = JOptionPane.showInputDialog("Enter the height of the parallelogram");
+                double parallelogramHeight;
+                parallelogramHeight = Double.parseDouble(parallelogram1);
+                JOptionPane.showMessageDialog(null,"The area of the parallelogram is:\n" +
+                parallelogramBase * parallelogramHeight);
+                break;
+                
+                //if user chooses 3 (rectangle) it will ask the user to enter dimensions.
+                case 3:
+                String rectangle;
+                rectangle = JOptionPane.showInputDialog("Enter the base of the rectangle");
+                double rectangleBase;
+                rectangleBase = Double.parseDouble(rectangle);
+                String rectangle1;
+                rectangle1 = JOptionPane.showInputDialog("Enter the height of the rectangle");
+                double rectangleHeight;
+                rectangleHeight = Double.parseDouble(rectangle1);
+                JOptionPane.showMessageDialog(null,"The area of the rectangle is:\n" +
+                rectangleBase * rectangleHeight);
+                break;
+                
+                //if user chooses 4 (trapezoid) it will ask the user to enter dimensions.
+                case 4:
+                String trapezoid;
+                trapezoid = JOptionPane.showInputDialog("Enter base1 of the trapezoid");
+                double trapezoidBase1;
+                trapezoidBase1 = Double.parseDouble(trapezoid);
+                String trapezoid1;
+                trapezoid1 = JOptionPane.showInputDialog("Enter base2 of the trapezoid");
+                double trapezoidBase2;
+                trapezoidBase2 = Double.parseDouble(trapezoid1);
+                String trapezoid2;
+                trapezoid2 = JOptionPane.showInputDialog("Enter the height of the trapezoid");
+                double trapezoidHeight;
+                trapezoidHeight = Double.parseDouble(trapezoid2);
+                JOptionPane.showMessageDialog(null,"The area of the trapezoid is:\n" +
+                      (.5 * trapezoidHeight)*(trapezoidBase1 + trapezoidBase2));
+                break;
+                
+                //if user chooses 5 (circle) it will ask the user to enter dimensions.
+                case 5:
+                String circle;
+                circle = JOptionPane.showInputDialog("Enter the radius of the circle");
+                double circleRadius;
+                circleRadius = Double.parseDouble(circle);
+                JOptionPane.showMessageDialog(null,"The area of the circle is:\n" +
+                      (3.14) * (circleRadius * circleRadius));
+                break;
+            }
+			}
+        
+			//if user chooses number 2 then it will ask to choose a shape.
+			else if(num == 2)
+			{
+				String volume;
+				volume = JOptionPane.showInputDialog("Chooose 1, 2, 3, 4, or 5:\n1-Cone\n2- Cylinder" +
+                                                 "\n3- Rectangular Prism\n4- Trapezoid Prism\n5- Sphere");
+				int num2;
+				num2 = Integer.parseInt(volume);
+				switch (num2)
+            	{
+            		//if user chooses 1 (cone) it will ask the user to enter dimensions.
+                    case 1:
+              		String cone;
+                    cone = JOptionPane.showInputDialog("Enter the height of the cone");
+              		double coneHeight;
+                    coneHeight = Double.parseDouble(cone);
+              		String cone1;
+              		cone1 = JOptionPane.showInputDialog("Enter the radius of the cone");
+                    double coneRadius;
+                    coneRadius = Double.parseDouble(cone1);
+                    JOptionPane.showMessageDialog(null,"The volume of the cone is:\n" +
+                      				(3.14 * (coneRadius * coneRadius) * coneHeight) / 3);
+                    break;
+                    
+                    //if user chooses 2 (cylinder) it will ask the user to enter dimensions.
+                    case 2:
+                    String cylinder;
+                    cylinder = JOptionPane.showInputDialog("Enter the height of the cylinder");
+                    double cylinderHeight;
+                    cylinderHeight = Double.parseDouble(cylinder);
+                    String cylinder1;
+                    cylinder1 = JOptionPane.showInputDialog("Enter the radius of the cylinder");
+                    double cylinderRadius;
+                    cylinderRadius = Double.parseDouble(cylinder1);
+                    JOptionPane.showMessageDialog(null,"The volume of the cylinder is:\n" +
+                      				(3.14 * (cylinderRadius * cylinderRadius) * cylinderHeight));
+                    break;
+                    
+                    //if user chooses 3 (rectangular prism) it will ask the user to enter dimensions.
+                    case 3:
+                    String rectangularPrism;
+                    rectangularPrism = JOptionPane.showInputDialog("Enter the length of the rectangular prism");
+                    double rectangularPrismLength;
+                    rectangularPrismLength = Double.parseDouble(rectangularPrism);
+                    String rectangularPrism1;
+                    rectangularPrism1 = JOptionPane.showInputDialog("Enter the width of the rectangular prism");
+                    double rectangularPrismWidth;
+                    rectangularPrismWidth = Double.parseDouble(rectangularPrism1);
+                    String rectangularPrism2;
+                    rectangularPrism2 = JOptionPane.showInputDialog("Enter the height of the rectangular prism");
+                    double rectangularPrismHeight;
+                    rectangularPrismHeight = Double.parseDouble(rectangularPrism2);
+                    JOptionPane.showMessageDialog(null,"The volume of the rectangular prism is:\n" +
+                    (rectangularPrismLength * rectangularPrismWidth * rectangularPrismHeight));
+                    break;
+                    
+                    //if user chooses 4 (trapezoid prism) it will ask the user to enter dimensions.
+                    case 4:
+                    String trapezoidPrism;
+                    trapezoidPrism = JOptionPane.showInputDialog("Enter base1 of the trapezoid prism");
+                    double trapezoidPrismBase1;
+                    trapezoidPrismBase1 = Double.parseDouble(trapezoidPrism);
+                    String trapezoidPrism1;
+                    trapezoidPrism1 = JOptionPane.showInputDialog("Enter base2 of the trapezoid prism");
+                    double trapezoidPrismBase2;
+                    trapezoidPrismBase2 = Double.parseDouble(trapezoidPrism1);
+                    String trapezoidPrism2;
+                    trapezoidPrism2 = JOptionPane.showInputDialog("Enter height of the trapezoid in trapezoid prism");
+                    double trapezoidPrismHeight1;
+                    trapezoidPrismHeight1 = Double.parseDouble(trapezoidPrism2);
+                    String trapezoidPrism3;
+                    trapezoidPrism3 = JOptionPane.showInputDialog("Enter height of the trapezoid prism");
+                    double trapezoidPrismHeight2;
+                    trapezoidPrismHeight2 = Double.parseDouble(trapezoidPrism3);
+                    JOptionPane.showMessageDialog(null,"The volume of the trapezoid prism is:\n" +
+                    		((trapezoidPrismHeight1 * (trapezoidPrismBase1 + trapezoidPrismBase2)) / 2) * trapezoidPrismHeight2);
+                    break;
+                    
+                    //if user chooses 5 (sphere) it will ask the user to enter dimensions.
+                    case 5:
+                    String sphere;
+                    sphere = JOptionPane.showInputDialog("Enter the radius of the sphere");
+                    double sphereRadius;
+                    sphereRadius = Double.parseDouble(sphere);
+                    JOptionPane.showMessageDialog(null,"The volume of the sphere is:\n" +
+                    		(4 * 3.14 * ((sphereRadius * sphereRadius * sphereRadius) / 3)));
+                    break;
+            	}
+			}
+			
+			//if user chooses a number that is not 1 or 2 then message will appear.
+			else
+			{
+				JOptionPane.showMessageDialog(null,"That is not 1 or 2!");
+			}
+			
+			option = JOptionPane.showInputDialog("Do you want to repeat (Y / N)?\n");
+			input = option.charAt(0);
+			
+		}while(input == 'Y');
+	}
+}
